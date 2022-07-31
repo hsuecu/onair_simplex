@@ -39,7 +39,11 @@ of making IO rodust and error free. As transmission gets over one
 of the part stops working stopping whole operation. 
 Remember what they say, it's not a bug its a feature.
 So, assuming you are using linux environment and you have `aplay`
-and `parec` preinstalled in your system. 
+and `parec` preinstalled in your system.
+
+!! Start the receiver first, then start the transmitter. Otherwise
+sync flg will be missed.
+
 ### Build
 just a simple shell script. run it by
 ```bash
@@ -53,6 +57,11 @@ cat <filename> | ./onair_upload | aplay -t raw -f S32 -r 384000 -c 1
 ### Recevier
 ```bash
 parec --channels 1 --rate 384000 --format s32 | ./onair_dft | ./onair_signal | ./onair_decode | python3 onair_convert.py
+```
+if you want only transmitted text and no verbose infromation just add 2>/dev/null to that stage
+i.e.
+```bash
+parec --channels 1 --rate 384000 --format s32 | ./onair_dft | ./onair_signal | ./onair_decode 2>/dev/null | python3 onair_convert.py
 ```
 
 #### Side Note
