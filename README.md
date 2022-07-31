@@ -52,7 +52,7 @@ cat <filename> | ./onair_upload | aplay -t raw -f S32 -r 384000 -c 1
 ```
 ### Recevier
 ```bash
-parec --channels 1 --rate 384000 --format s32 | ./onair_dft | ./onair_signal | ./onair_decoder | python3 onair_convert.py
+parec --channels 1 --rate 384000 --format s32 | ./onair_dft | ./onair_signal | ./onair_decode | python3 onair_convert.py
 ```
 
 #### Side Note
