@@ -40,6 +40,11 @@ of the part stops working stopping whole operation.
 Remember what they say, it's not a bug its a feature.
 So, assuming you are using linux environment and you have `aplay`
 and `parec` preinstalled in your system. 
+### Build
+just a simple shell script. run it by
+```bash
+sh build.sh
+```
 ### Transmission
 so the ascii file you want to send.
 ```bash
