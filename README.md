@@ -32,3 +32,9 @@ morse encoding which mapps to particular nibble.
 values.
 
 data transfer over near ultrasonic audio band
+
+## Usage
+### Transmission
+```bash
+cat <filename> | ./ONAIR | aplay -t raw -f S32 -r 384000 -c 1
+```
