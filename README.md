@@ -22,9 +22,9 @@ audio channel. It implementation can be pointed out as.
 
 1. PCM audio data from microphone which is sampled @384khz is 
 passed to DFT to filter two frequency component.
-2. Q 18.8khz and Q` 19khz , their DFT magitudes are passed to 
+2. Q 18.8khz and ~Q 19khz , their DFT magitudes are passed to 
 convert into streams of 1's and 0's using Differential Encoding
-over Q and Q` values.
+over Q and ~Q values.
 3. these streams of 1's and 0's are then converted into custom
 morse encoding which mapps to particular nibble.
 4. these nibbles were transmitted from MSB to LSB order.
